@@ -227,3 +227,9 @@ logging:
 #enable swagger
 swagger:
   enable: false
+
+#爱广西
+igx:
+  igxUrl: http://aigxtest.cloudbae.cn:10001
+  ClientId: lhC8ikdp0BKDugdzDGob
+  ClientSecret: 4xXnsun7iCfbLCQopBQI

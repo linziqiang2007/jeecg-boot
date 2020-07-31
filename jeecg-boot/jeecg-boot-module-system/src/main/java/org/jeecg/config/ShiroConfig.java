@@ -119,6 +119,10 @@ public class ShiroConfig {
 		filterChainDefinitionMap.put("/big/screen/**", "anon");
 		filterChainDefinitionMap.put("/bigscreen/**", "anon");
 
+		//爱广西
+		filterChainDefinitionMap.put("/aigx/IgxBaseApi/**", "anon");
+
+
 		//排除Online请求
 		filterChainDefinitionMap.put("/auto/cgform/**", "anon");
 

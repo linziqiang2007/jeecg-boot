@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>云上广西测试页</title>
+
+</head>
+<body>
+
+<!--<script src="hybrid-bridge-2.0.0-alpha.1.js"></script>-->
+<script src="https://file.cloudbae.cn:39400/api/v1/file/hybrid/hybrid-bridge-2.0.0-alpha.1.js"></script>
+<script type="text/javascript">
+    // import { hybridBridge } from '@tanbo/hybrid-bridge';
+    var igxCode = "00000000";
+    function myFunction(){
+        var clientID = "lhC8ikdp0BKDugdzDGob";
+        cloudbae.hybridBridge.user.authorization(clientID).then(function (result) {
+            console.error("result code:"+result);
+            // result = {
+            //   state: string,
+            //   code: string
+            // };
+            igxCode = result.code;
+            alert("code:" + igxCode);
+            document.getElementById("codeid").innerHTML("code: " + igxCode)
+        });
+        console.info("code:" + "获取失败");
+        // document.getElementById("codeid").innerText("code: " + 11111);
+        document.getElementById("codeid").innerHTML="获取失败!";
+    }
+</script>
+<dev>
+  <h2>前端获取code</h2>
+  <h2 id="codeid">code: </h2>
+  <br/>
+  <br/>
+  <button type="button" onclick="myFunction()">点击这里获取code</button>
+</dev>
+</body>
+
+</html>

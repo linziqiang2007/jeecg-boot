@@ -127,10 +127,15 @@ spring:
         connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+#          url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&serverTimezone=GMT%2B8
+          url: jdbc:mysql://113.16.195.18:3307/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&serverTimezone=GMT%2B8
           username: root
-          password: root
-          driver-class-name: com.mysql.cj.jdbc.Driver
+          password: 12345678
+          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://222.84.250.9:33061/cgx_zcgl?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+#          username: cloudgx
+#          password: :Jw3mmzYod$)L;xMg*wc
+#          driver-class-name: com.mysql.jdbc.Driver
           # 多数据源配置
           #multi-datasource1:
           #url: jdbc:mysql://localhost:3306/jeecg-boot2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
@@ -228,4 +233,10 @@ cas:
 #enable swagger
 swagger:
   enable: true
+
+#爱广西
+igx:
+  igxUrl: http://aigxtest.cloudbae.cn:10001
+  ClientId: lhC8ikdp0BKDugdzDGob
+  ClientSecret: 4xXnsun7iCfbLCQopBQI
 

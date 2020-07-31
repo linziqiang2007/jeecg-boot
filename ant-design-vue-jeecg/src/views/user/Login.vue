@@ -107,9 +107,9 @@
 
       <div class="user-login-other">
         <span>其他登陆方式</span>
-        <a @click="onThirdLogin('github')" title="github"><a-icon class="item-icon" type="github"></a-icon></a>
-        <a @click="onThirdLogin('wechat_enterprise')" title="企业微信"><a-icon class="item-icon" type="wechat"></a-icon></a>
         <a @click="onThirdLogin('dingtalk')" title="钉钉"><a-icon class="item-icon" type="dingding"></a-icon></a>
+<!--        <a @click="onThirdLogin('github')" title="github"><a-icon class="item-icon" type="github"></a-icon></a>-->
+<!--        <a @click="onThirdLogin('wechat_enterprise')" title="企业微信"><a-icon class="item-icon" type="wechat"></a-icon></a>-->
       </div>
     </a-form>
 
@@ -188,6 +188,7 @@
       //第三方登录
       onThirdLogin(source){
         let url = window._CONFIG['domianURL']+`/thirdLogin/render/${source}`
+          console.log('###'+ url);
         window.open(url, `login ${source}`, 'height=500, width=500, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no')
         let that = this;
         let receiveMessage = function(event){
